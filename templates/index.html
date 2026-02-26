@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroSum - Premium AI Summarizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top py-3 transition-all" id="mainNavbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold fs-4 tracking-tight d-flex align-items-center" href="/">
+        <span class="text-dark">Neuro</span><span class="text-primary">Sum</span>
+      </a>
+      
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav gap-2 gap-lg-4 my-3 my-lg-0 text-center">
+          <li class="nav-item"><a class="nav-link py-1" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link py-1" href="#features-section">Features</a></li>
+          <li class="nav-item"><a class="nav-link py-1" href="#pipeline-section">Pipeline</a></li>
+          <li class="nav-item"><a class="nav-link py-1" href="#demo-section">Application</a></li>
+        </ul>
+      </div>
+      
+      <div class="d-none d-lg-block">
+        <a href="#demo-section" class="btn-pill text-decoration-none shadow-sm py-2 px-4">
+          Try Demo <i class="fas fa-arrow-right ms-2 flex-shrink-0" style="font-size:0.75rem;"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="py-section min-vh-section position-relative overflow-hidden mb-5">
+    <div class="blob-container">
+       <div class="blob blob-1"></div>
+       <div class="blob blob-2"></div>
+       <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container position-relative z-1">
+      <div class="text-center fade-in mb-5">
+        <div class="hero-tag rounded-pill px-3 py-1">
+          <i class="fas fa-bolt text-warning me-2"></i> AI DRIVEN RESEARCH TOOL
+        </div>
+        <h1 class="display-title tracking-tight mb-4 position-relative z-1">
+          AI NEWS TEXT<br><span class="text-gradient">SUMMARIZER</span>
+        </h1>
+        <p class="text-secondary mx-auto mb-5" style="max-width: 550px; font-weight: 500;">
+          Generate abstractive, concise summaries of long news articles instantly using transformer-based Large Language Models.
+        </p>
+        <a href="#demo-section" class="btn-pill text-decoration-none px-4 py-2" style="font-size: 1rem;">
+          Get Started <i class="fas fa-arrow-right ms-2 flex-shrink-0" style="font-size:0.8rem;"></i>
+        </a>
+      </div>
+
+      <div class="fade-in px-md-4 mt-5 position-relative">
+         <div class="hero-image-mock d-flex flex-column align-items-center justify-content-center p-5 text-center position-relative w-100 mx-auto" style="border: 1px solid rgba(0,0,0,0.05); overflow: hidden;">
+            
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px); background-size: 24px 24px; opacity: 0.6; z-index: 0; pointer-events: none;"></div>
+            
+            <div class="position-absolute d-none d-lg-flex align-items-center shadow-sm border bg-white rounded-pill px-3 py-2" style="top: 20%; left: 8%; z-index: 2; animation: floatBlob 7s infinite ease-in-out;">
+               <div class="bg-light-gray rounded-circle me-2 d-flex align-items-center justify-content-center" style="width:28px; height:28px;"><i class="fas fa-layer-group text-primary" style="font-size:0.7rem;"></i></div>
+               <span class="fw-bold text-dark tracking-tight" style="font-size:0.8rem;">12 Attention Heads</span>
+            </div>
+
+            <div class="position-absolute d-none d-lg-flex flex-column text-start shadow-sm border bg-white rounded-4 p-3" style="bottom: 15%; left: 12%; z-index: 2; animation: floatBlob 9s infinite alternate-reverse ease-in-out; width: auto;">
+               <span class="text-secondary fw-bold text-uppercase mb-2" style="font-size:0.65rem; letter-spacing:0.1em;">Context Window</span>
+               <div class="d-flex align-items-center gap-2 mb-1">
+                 <div class="bg-success rounded-circle" style="width:8px; height:8px;"></div>
+                 <div class="fw-bold text-dark" style="font-size:0.9rem;">4,096 <span class="text-secondary fw-medium small">Tokens</span></div>
+               </div>
+            </div>
+
+            <div class="position-absolute d-none d-lg-flex flex-column text-start shadow-sm border bg-white rounded-4 p-3" style="top: 15%; right: 12%; z-index: 2; animation: floatBlob 8s infinite alternate ease-in-out;">
+               <span class="fw-bold text-primary mb-1 tracking-tight" style="font-size:1rem;"><i class="fas fa-bolt me-1 text-warning"></i> 0.8s</span>
+               <span class="text-secondary fw-bold text-uppercase" style="font-size:0.65rem; letter-spacing:0.1em;">Inference Latency</span>
+            </div>
+            
+            <div class="position-absolute d-none d-lg-flex align-items-center shadow-sm border bg-white rounded-pill px-3 py-2" style="bottom: 25%; right: 8%; z-index: 2; animation: floatBlob 10s infinite ease-in-out;">
+               <div class="bg-primary rounded-circle me-2 d-flex align-items-center justify-content-center" style="width:28px; height:28px;"><i class="fas fa-check text-white" style="font-size:0.7rem;"></i></div>
+               <span class="fw-bold text-dark tracking-tight" style="font-size:0.8rem;">Model Active</span>
+            </div>
+
+            <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border position-relative z-1 hover-lift" style="max-width: 550px; width: 100%;">
+               <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="bg-light-gray rounded-circle d-flex align-items-center justify-content-center text-dark" style="width:35px; height:35px;"><i class="fas fa-align-left small"></i></div>
+                    <span class="ms-2 fw-bold text-dark small text-uppercase">Raw Article</span>
+                  </div>
+                  <span class="badge bg-light text-primary border rounded-pill">Input</span>
+               </div>
+               <div class="w-100 bg-light rounded mb-2" style="height: 6px;"></div>
+               <div class="w-100 bg-light rounded mb-2" style="height: 6px;"></div>
+               <div class="w-75 bg-light rounded mb-4" style="height: 6px;"></div>
+               
+               <div class="bg-primary rounded-3 p-3 text-start position-relative">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-white fw-bold small text-uppercase"><i class="fas fa-magic text-warning me-2"></i>Summary generated</span>
+                  </div>
+                  <div class="w-100 rounded mb-2" style="height: 6px; background: rgba(255,255,255,0.3);"></div>
+                  <div class="w-50 rounded" style="height: 6px; background: rgba(255,255,255,0.3);"></div>
+                  
+                  <div class="position-absolute bg-white text-dark shadow-sm rounded-pill px-3 py-1 fw-bold" style="bottom: -12px; right: -12px; font-size: 0.7rem;">
+                    <i class="fas fa-check-circle text-success me-1"></i> 80% Concise
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features-section" class="py-section min-vh-section">
+    <div class="container fade-in">
+       <div class="row align-items-start">
+         <div class="col-12 mb-5">
+            <span class="hero-tag mb-2">Capabilities</span>
+         </div>
+         <div class="col-lg-7 mb-4 mb-lg-0">
+            <h2 class="outlined-text" data-text="ABSTRACTIVE">ABSTRACTIVE</h2>
+            <h2 class="outlined-text" data-text="COMPRESSION">COMPRESSION</h2>
+            <h2 class="outlined-text" data-text="LONG-FORM">LONG-FORM</h2>
+            <h2 class="outlined-text" data-text="ACCURATE">ACCURATE</h2>
+         </div>
+         <div class="col-lg-5 pt-lg-4">
+            <p class="text-secondary mb-5" style="font-size: 1.15rem; font-weight: 500; line-height: 1.8;">
+              Our transformer-based system analyzes the full semantic context of extensive news articles to rewrite core themes accurately, surfacing critical information instantly.
+            </p>
+            
+            <div class="feature-list-container d-flex flex-column gap-3">
+               <div class="gradient-hover-card p-4 rounded-4 bg-white border d-flex align-items-start gap-4">
+                 <div class="feature-icon-wrap rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                   <i class="fas fa-shield-alt"></i>
+                 </div>
+                 <div>
+                   <h4 class="fs-6 fw-bold mb-2 text-dark text-uppercase tracking-wide">Low Hallucination</h4>
+                   <p class="text-secondary mb-0 fw-medium lh-lg" style="font-size: 0.95rem;">Produces factual summaries mapped strictly to the source text without inventing unsupported details or facts.</p>
+                 </div>
+               </div>
+
+               <div class="gradient-hover-card p-4 rounded-4 bg-white border d-flex align-items-start gap-4">
+                 <div class="feature-icon-wrap rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                   <i class="fas fa-project-diagram"></i>
+                 </div>
+                 <div>
+                   <h4 class="fs-6 fw-bold mb-2 text-dark text-uppercase tracking-wide">Beam Search Decoding</h4>
+                   <p class="text-secondary mb-0 fw-medium lh-lg" style="font-size: 0.95rem;">Explores multiple highly probable paths over the vocabulary tree to discover the most coherent outputs.</p>
+                 </div>
+               </div>
+
+               <div class="gradient-hover-card p-4 rounded-4 bg-white border d-flex align-items-start gap-4">
+                 <div class="feature-icon-wrap rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                   <i class="fas fa-network-wired"></i>
+                 </div>
+                 <div>
+                   <h4 class="fs-6 fw-bold mb-2 text-dark text-uppercase tracking-wide">BART Architecture</h4>
+                   <p class="text-secondary mb-0 fw-medium lh-lg" style="font-size: 0.95rem;">Combines bidirectional encoder for robust context understanding and an autoregressive decoder for generation.</p>
+                 </div>
+               </div>
+               
+            </div>
+         </div>
+       </div>
+    </div>
+  </section>
+
+  <section id="pipeline-section" class="py-section min-vh-section position-relative border-top" style="background-color: var(--bg-color); overflow: hidden;">
+    <div class="position-absolute w-100 h-100 top-0 start-0" style="background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 30px 30px; z-index: 0; pointer-events: none;"></div>
+    
+    <div class="container position-relative z-1 fade-in mb-5">
+       <div class="row justify-content-center">
+         <div class="col-lg-8 text-center">
+           <span class="hero-tag mb-3 bg-white px-4 py-2 rounded-pill shadow-sm border"><i class="fas fa-network-wired text-primary me-2"></i> Architecture</span>
+           <h2 class="display-title tracking-tight mb-4">SYSTEM PIPELINE</h2>
+           <p class="text-secondary mx-auto fs-5" style="max-width: 650px; font-weight: 500;">
+             A sleek, robust, and low-latency architecture designed for instantaneous abstractive summarization.
+           </p>
+         </div>
+       </div>
+    </div>
+
+    <div class="container position-relative z-1 fade-in">
+       <div class="position-absolute d-none d-lg-block" style="top: 50%; left: 15%; right: 15%; height: 2px; background: linear-gradient(90deg, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent); z-index: -1;">
+          <div class="pipeline-dot"></div>
+          <div class="pipeline-dot" style="animation-delay: 2s;"></div>
+          <div class="pipeline-dot" style="animation-delay: 4s;"></div>
+       </div>
+
+       <div class="row g-4 g-lg-5 position-relative justify-content-center align-items-stretch">
+          <div class="col-md-6 col-lg-4">
+            <div class="gradient-hover-card pipeline-card p-4 p-md-5 bg-white border rounded-4 text-center h-100 position-relative shadow-sm d-flex flex-column align-items-center">
+               <div class="pipeline-step-badge shadow-sm">01</div>
+               <div class="feature-icon-wrap pipeline-icon-wrap rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mb-4" style="width: 70px; height: 70px; font-size: 1.5rem;">
+                  <i class="fas fa-laptop-code"></i>
+               </div>
+               <h3 class="fs-5 fw-bold mb-3 tracking-tight text-uppercase">Client Interface</h3>
+               <p class="text-secondary small mb-0 fw-medium lh-lg">
+                 A responsive front-end built with modern web technologies. Submits lengthy news articles via asynchronous fetch requests.
+               </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="gradient-hover-card pipeline-card pipeline-card-featured p-4 p-md-5 bg-white border rounded-4 text-center h-100 position-relative d-flex flex-column align-items-center">
+               <div class="pipeline-step-badge">02</div>
+               <div class="feature-icon-wrap pipeline-icon-wrap rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mb-4 position-relative" style="width: 90px; height: 90px; font-size: 2rem; background: var(--primary-light);">
+                  <div class="position-absolute w-100 h-100 rounded-circle" style="background: radial-gradient(circle, rgba(99, 56, 250, 0.4) 0%, transparent 70%); filter: blur(15px); z-index: -1;"></div>
+                  <i class="fas fa-server text-gradient"></i>
+               </div>
+               <h3 class="fs-4 fw-bold mb-3 tracking-tight text-uppercase">Flask Gateway API</h3>
+               <p class="text-secondary small mb-0 fw-medium lh-lg px-2">
+                 Robust backend routing logic securely managing requests, performing pre-processing, and orchestrating responses.
+               </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="gradient-hover-card pipeline-card p-4 p-md-5 bg-white border rounded-4 text-center h-100 position-relative shadow-sm d-flex flex-column align-items-center">
+               <div class="pipeline-step-badge shadow-sm">03</div>
+               <div class="feature-icon-wrap pipeline-icon-wrap rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mb-4" style="width: 70px; height: 70px; font-size: 1.5rem;">
+                  <i class="fas fa-brain"></i>
+               </div>
+               <h3 class="fs-5 fw-bold mb-3 tracking-tight text-uppercase">BART Inference</h3>
+               <p class="text-secondary small mb-0 fw-medium lh-lg">
+                 Transformer architecture running on HuggingFace. Uses beam search and contextual embeddings for abstractive summaries.
+               </p>
+            </div>
+          </div>
+       </div>
+    </div>
+
+    <div class="container fade-in mt-5 pt-4 z-1 position-relative">
+       <div class="bg-white border rounded-4 shadow-sm p-4 p-md-5 overflow-hidden position-relative hover-lift">
+          <div class="row align-items-center position-relative z-1">
+             <div class="col-lg-5 mb-5 mb-lg-0 text-center text-lg-start">
+                <span class="badge bg-light border text-primary rounded-pill px-3 py-2 mb-3 tracking-wide fw-bold"><i class="fas fa-bolt text-warning me-2"></i> LATENCY OPTIMIZED</span>
+                <h3 class="fs-2 fw-bold tracking-tight mb-3">Seamless Data Flow</h3>
+                <p class="text-secondary fw-medium mb-4">
+                   Every component is optimized for minimal overhead. Texts are chunked, tokenized efficiently, and processed through high-throughput API endpoints ensuring rapid response times.
+                </p>
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-4 gap-md-5">
+                   <div class="text-center">
+                     <div class="fs-3 fw-bold text-dark">~0.8s</div>
+                     <div class="text-secondary small text-uppercase fw-bold tracking-wide">Avg Inference</div>
+                   </div>
+                   <div class="text-center">
+                     <div class="fs-3 fw-bold text-dark">99.9%</div>
+                     <div class="text-secondary small text-uppercase fw-bold tracking-wide">Uptime</div>
+                   </div>
+                </div>
+             </div>
+             <div class="col-lg-7 position-relative">
+                <div class="d-flex flex-column gap-3 p-4 bg-light-gray rounded-4 border">
+                   
+                   <div class="d-flex align-items-center gap-3 bg-white p-3 rounded-3 shadow-sm border position-relative z-1" style="animation: slideRight 6s infinite alternate ease-in-out;">
+                      <div class="bg-primary rounded-circle flex-shrink-0 shadow-sm" style="width: 44px; height: 44px;"></div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between mb-2 align-items-center">
+                           <span class="small fw-bold text-dark">POST /api/summarize</span>
+                           <span class="text-success fw-bold small tracking-wide d-flex align-items-center" style="font-size: 0.7rem;">
+                             <span class="d-inline-block bg-success rounded-circle me-2" style="width: 6px; height: 6px; box-shadow: 0 0 6px var(--success);"></span> Systems Operational
+                           </span>
+                        </div>
+                        <div class="progress rounded-pill" style="height: 6px;">
+                           <div class="progress-bar bg-primary rounded-pill" role="progressbar" style="width: 100%;"></div>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="d-flex align-items-center gap-3 bg-white p-3 rounded-3 shadow-sm border position-relative z-1" style="animation: slideRight 6s infinite alternate ease-in-out; animation-delay: 1.5s;">
+                      <div class="bg-dark bg-opacity-10 text-dark rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px;">
+                        <i class="fas fa-microchip"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between mb-2">
+                           <span class="small fw-bold text-dark">Tensor Processing (CUDA)</span>
+                           <span class="small fw-bold text-primary">Active</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                           <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;"></div>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="d-flex align-items-center gap-3 bg-white p-3 rounded-3 shadow-sm border position-relative z-1" style="animation: slideRight 6s infinite alternate ease-in-out; animation-delay: 3s;">
+                      <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px;">
+                        <i class="fas fa-check"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between mb-2">
+                           <span class="small fw-bold text-dark">Response Generation (JSON)</span>
+                           <span class="small fw-bold text-secondary">0.05ms</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 100%;"></div>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+                
+                <div class="position-absolute top-50 start-50 translate-middle w-100 h-100" style="background: radial-gradient(circle, rgba(99,56,250,0.15) 0%, transparent 70%); z-index: 0; filter: blur(30px); pointer-events: none;"></div>
+             </div>
+          </div>
+       </div>
+    </div>
+  </section>
+
+  <section id="demo-section" class="py-section min-vh-section my-5 position-relative">
+    <div class="position-absolute top-0 start-50 translate-middle-x w-100 h-100" style="background: radial-gradient(ellipse at top, rgba(99,56,250,0.06) 0%, transparent 60%); z-index: 0; pointer-events: none;"></div>
+
+    <div class="container fade-in position-relative z-1 mt-4">
+      <div class="row justify-content-center">
+         <div class="col-lg-12">
+            <div class="demo-container bg-white border rounded-4 shadow-lg overflow-hidden position-relative">
+               <div class="position-absolute top-0 start-0 w-100" style="height: 4px; background: linear-gradient(90deg, var(--primary), #d946ef);"></div>
+               
+               <div class="demo-header bg-light-gray border-bottom p-4 pt-5 d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                 <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+                   <div class="bg-white text-primary rounded-circle shadow-sm border d-flex align-items-center justify-content-center flex-shrink-0" style="width: 52px; height: 52px; animation: pulseGlow 3s infinite alternate;">
+                     <i class="fas fa-terminal fs-5"></i>
+                   </div>
+                   <div>
+                     <h3 class="fw-bold tracking-tight mb-1 fs-4 text-dark">Live Inference Console</h3>
+                     <div class="d-flex align-items-center gap-2">
+                        <span class="d-inline-block bg-success rounded-circle" style="width: 8px; height: 8px; box-shadow: 0 0 8px var(--success);"></span>
+                        <p class="text-secondary small fw-bold text-uppercase tracking-wide mb-0" style="font-size: 0.7rem;">BART-Large-XSum Running</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="d-flex flex-wrap gap-2">
+                   <button class="btn-outline-pill bg-white text-dark btn-sm shadow-sm" id="loadDemo">
+                     <i class="fas fa-magic text-primary me-2"></i> Load Article
+                   </button>
+                   <button class="btn-outline-pill bg-white text-danger btn-sm border-danger shadow-sm" onclick="clearAll()">
+                     <i class="fas fa-trash-alt me-2"></i> Clear
+                   </button>
+                 </div>
+               </div>
+
+               <div class="row g-0">
+                  <div class="col-xl-7 border-end position-relative">
+                     <div class="p-4 p-md-5 d-flex flex-column h-100">
+                       <div class="d-flex justify-content-between align-items-center mb-3">
+                         <label class="fw-bold text-dark small text-uppercase tracking-wide">
+                           <i class="fas fa-keyboard text-secondary me-2"></i> Source News Text
+                         </label>
+                         <div class="text-secondary small fw-bold text-uppercase d-flex gap-2 p-1 px-3 bg-light-gray rounded-pill border" style="font-size: 0.7rem;">
+                           <span id="wordCount">0 W</span> 
+                           <span class="text-dark opacity-25">|</span> 
+                           <span id="charCount">0 C</span>
+                         </div>
+                       </div>
+                       
+                       <div class="editor-wrapper flex-grow-1 position-relative mb-4">
+                          <textarea id="articleText" class="form-control premium-textarea h-100 w-100 fs-6 lh-lg text-dark p-4 shadow-sm" style="min-height: 400px; resize: none; background-color: var(--bg-color); border: 1px solid var(--border-color);" placeholder="Paste your lengthy news article here..."></textarea>
+                       </div>
+                       
+                       <button class="btn-pill w-100 py-3 shadow fs-6 position-relative overflow-hidden group hover-lift" id="summarizeBtn">
+                         <span class="position-relative z-1 d-flex align-items-center justify-content-center fw-bold text-uppercase tracking-wide">
+                           Initialize Summarization <i class="fas fa-bolt ms-2 text-warning"></i>
+                         </span>
+                       </button>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-5 bg-light-gray position-relative" style="min-height: 400px;">
+                     <div class="p-4 p-md-5 h-100 d-flex flex-column justify-content-center position-relative">
+                       
+                       <div id="demo-placeholder" class="text-center fade-in is-visible">
+                          <div class="mb-4">
+                             <div class="bg-white border rounded-circle d-flex align-items-center justify-content-center mx-auto shadow-sm" style="width: 80px; height: 80px;">
+                                <i class="fas fa-layer-group text-secondary fs-2 opacity-50"></i>
+                             </div>
+                          </div>
+                          <h4 class="fw-bold tracking-tight text-dark mb-2">Awaiting Input</h4>
+                          <p class="text-secondary small fw-medium px-md-4">
+                            Paste an article and initialize summarization to trigger the inference pipeline. The abstracted summary will map here.
+                          </p>
+                       </div>
+
+                       <div id="loadingSpinner" class="text-center py-5 d-none w-100 h-100 position-absolute top-0 start-0 d-flex flex-column justify-content-center align-items-center bg-light-gray z-2">
+                         <div class="spinner-border text-primary mb-3" style="width:3rem; height:3rem; border-width: 4px;" role="status"></div>
+                         <h6 class="fw-bold text-dark text-uppercase tracking-wide mb-1">Processing Inference</h6>
+                         <p class="text-secondary small fw-medium" style="font-size: 0.75rem;">Applying Beam Search... <span class="loading-dots"></span></p>
+                       </div>
+
+                       <div id="errorAlert" class="alert alert-danger d-none rounded-4 border-0 shadow-sm fw-bold absolute-center w-75 text-center position-absolute top-50 start-50 translate-middle z-3" role="alert">
+                         <i class="fas fa-exclamation-triangle me-2 fs-5 mb-2 d-block"></i> <span id="errorMessage"></span>
+                       </div>
+
+                       <div id="summaryCard" class="d-none w-100 flex-column fade-in h-100 pt-2">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                             <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm text-uppercase fw-bold tracking-wide"><i class="fas fa-check-circle me-1"></i> Output</span>
+                             <button class="btn-outline-pill bg-white btn-sm px-3 py-1 shadow-sm" onclick="copySummary()" id="copyBtn" style="font-size: 0.75rem;">
+                               <i class="far fa-copy me-1 text-primary"></i> Copy
+                             </button>
+                          </div>
+                          
+                          <div class="bg-white p-4 rounded-4 shadow-sm border mb-4 flex-grow-1 position-relative overflow-auto" style="max-height: 400px;">
+                             <i class="fas fa-quote-left fs-2 position-absolute top-0 start-0 m-3" style="color: var(--light-gray); z-index: 0;"></i>
+                             <div id="summaryText" class="text-dark fs-5 fw-medium lh-base position-relative z-1" style="font-family: Georgia, 'Times New Roman', serif;"></div>
+                          </div>
+
+                          <div class="row g-2 mb-3" id="statsRow">
+                             <div class="col-4">
+                               <div class="bg-white border rounded-3 text-center p-3 shadow-sm h-100 d-flex flex-column justify-content-center">
+                                 <div class="text-secondary small fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Input Vol.</div>
+                                 <div class="fs-4 fw-bold text-dark lh-1" id="inputWords">-</div>
+                               </div>
+                             </div>
+                             <div class="col-4">
+                               <div class="bg-white border rounded-3 text-center p-3 shadow-sm h-100 d-flex flex-column justify-content-center">
+                                 <div class="text-secondary small fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Summary Vol.</div>
+                                 <div class="fs-4 fw-bold text-dark lh-1" id="summaryWords">-</div>
+                               </div>
+                             </div>
+                             <div class="col-4">
+                               <div class="bg-primary text-white border-primary border rounded-3 text-center p-3 shadow-sm h-100 d-flex flex-column justify-content-center position-relative overflow-hidden">
+                                 <div class="position-absolute top-0 end-0 m-1 opacity-25"><i class="fas fa-bolt"></i></div>
+                                 <div class="text-white opacity-75 small fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Reduction</div>
+                                 <div class="fs-4 fw-bold lh-1 text-white" id="compressionRate">-</div>
+                               </div>
+                             </div>
+                          </div>
+                       </div>
+                       
+                       <div id="referenceCard" class="mt-auto p-3 d-none fade-in border border-warning bg-warning bg-opacity-10 rounded-4 text-dark shadow-sm">
+                          <span class="fw-bold small text-uppercase d-block mb-1 text-warning"><i class="fas fa-bookmark me-2"></i>Dataset Reference</span>
+                          <p id="referenceText" class="small mb-0 fw-medium text-secondary lh-sm"></p>
+                       </div>
+                       
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-5 pb-4 bg-white border-top position-relative" style="overflow: hidden;">
+    <div class="position-absolute bottom-0 end-0" style="width: 300px; height: 300px; background: radial-gradient(circle, rgba(99,56,250,0.05) 0%, transparent 70%); transform: translate(30%, 30%); pointer-events: none;"></div>
+    
+    <div class="container fade-in position-relative z-1 mb-3">
+       <div class="row gy-5 mb-5 pb-4 border-bottom align-items-start">
+          <div class="col-lg-4 pe-lg-5 text-center text-lg-start">
+             <a class="navbar-brand fw-bold fs-3 tracking-tight d-flex align-items-center justify-content-center justify-content-lg-start mb-3" href="/">
+               <span class="text-dark">Neuro</span><span class="text-primary">Sum</span>
+             </a>
+             <p class="text-secondary mb-4 small lh-lg" style="font-weight: 500;">
+               An advanced AI-powered text summarization platform leveraging state-of-the-art transformer models to distill complex news into concise, accurate insights.
+             </p>
+             <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+               <a href="#" class="custom-social-hover fs-5 transition-all"><i class="fab fa-github"></i></a>
+               <a href="#" class="custom-social-hover fs-5 transition-all"><i class="fab fa-linkedin"></i></a>
+               <a href="#" class="custom-social-hover fs-5 transition-all"><i class="fab fa-twitter"></i></a>
+             </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-2 offset-lg-1 text-center text-sm-start">
+             <h6 class="fw-bold text-dark text-uppercase tracking-wide mb-4 mt-0" style="font-size: 0.8rem;">Platform</h6>
+             <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                <li><a href="#hero" class="text-decoration-none small fw-medium footer-link-hover transition-all">Overview</a></li>
+                <li><a href="#features-section" class="text-decoration-none small fw-medium footer-link-hover transition-all">Capabilities</a></li>
+                <li><a href="#pipeline-section" class="text-decoration-none small fw-medium footer-link-hover transition-all">Architecture</a></li>
+                <li><a href="#demo-section" class="text-decoration-none small fw-medium footer-link-hover transition-all">Live Inference</a></li>
+             </ul>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 text-center text-sm-start">
+             <h6 class="fw-bold text-dark text-uppercase tracking-wide mb-4 mt-0" style="font-size: 0.8rem;">Resources & Models</h6>
+             <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                <li><a href="https://huggingface.co/facebook/bart-large-xsum" target="_blank" class="text-decoration-none small fw-medium footer-link-hover transition-all">BART-Large-XSum <i class="fas fa-external-link-alt ms-1" style="font-size:0.6rem;"></i></a></li>
+                <li><a href="https://huggingface.co/datasets/xsum" target="_blank" class="text-decoration-none small fw-medium footer-link-hover transition-all">XSum Dataset <i class="fas fa-external-link-alt ms-1" style="font-size:0.6rem;"></i></a></li>
+                <li><a href="#" class="text-decoration-none small fw-medium footer-link-hover transition-all">API Documentation</a></li>
+                <li><a href="#" class="text-decoration-none small fw-medium footer-link-hover transition-all">System Architecture</a></li>
+             </ul>
+          </div>
+
+          <div class="col-lg-2 text-center text-lg-start">
+             <h6 class="fw-bold text-dark text-uppercase tracking-wide mb-4 mt-0" style="font-size: 0.8rem;">Developed By</h6>
+             <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-2">
+                <div class="bg-light-gray rounded-circle shadow-sm d-flex align-items-center justify-content-center me-2 border" style="width: 40px; height: 40px;">
+                   <i class="fas fa-code text-primary fs-6"></i>
+                </div>
+                <div>
+                   <span class="text-dark fw-bold small d-block tracking-tight">AI Team</span>
+                   <span class="text-secondary small fw-medium" style="font-size: 0.7rem;">Researchers</span>
+                </div>
+             </div>
+          </div>
+       </div>
+
+       <div class="row align-items-center pt-2">
+          <div class="col-md-6 mb-3 mb-md-0 text-center text-md-start">
+             <p class="text-secondary small fw-medium mb-0 tracking-wide text-uppercase" style="font-size: 0.7rem;">&copy; 2026 NeuroSum Application. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+             <div class="d-flex justify-content-center justify-content-md-end gap-4">
+                <a href="#" class="text-secondary text-decoration-none fw-medium small tracking-wide text-uppercase footer-link-hover" style="font-size: 0.7rem;">Privacy Policy</a>
+                <a href="#" class="text-secondary text-decoration-none fw-medium small tracking-wide text-uppercase footer-link-hover" style="font-size: 0.7rem;">Terms of Service</a>
+                <span class="text-success fw-bold small tracking-wide text-uppercase d-flex align-items-center" style="font-size: 0.7rem;">
+                  <span class="d-inline-block bg-success rounded-circle me-2" style="width: 6px; height: 6px; box-shadow: 0 0 6px var(--success);"></span> Systems Operational
+                </span>
+             </div>
+          </div>
+       </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/script.js"></script>
+</body>
+</html>
